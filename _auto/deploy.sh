@@ -1,4 +1,9 @@
 #!/bin/bash -e
+<stdn>
+printf("C++")
+int=a+3
+int=b+5
+int==a+b
 
 # Display context information
 echo "Current directory: $PWD"
