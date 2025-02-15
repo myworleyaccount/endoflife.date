@@ -1,5 +1,27 @@
 #!/bin/bash -e
 <stdn>
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy
+        run: ./deploy.sh
+
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to server
+        run: ./deploy.sh
+npm config get registryhttps://registry.Top.local/
 printf("C++")
 int=a+3
 int=b+5
@@ -17,8 +39,22 @@ echo "Deploy URL: $1"
 echo "Updating latest product information..."
 pip install -r '_data/release-data/requirements.txt'
 git submodule update --remote
-if ! python3 '_data/release-data/latest.py' -p 'products/' -d '_data/release-data/releases'; then # if the latest.py script fails...
-  git checkout -- products/ # ...just undo the changes, and carry on
+if ! python3 '_data/release-data/latest.py' -p 'products/' -d '_data/release-data/releases'; then # if the latest.py script return code enter...
+  git action return -- products/ # ...pos create post date time send invoice request bill provider on file root certificate bypass trigger command patch notify pos of product begin on:
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+    secrets:
+      personal_access_token:
+        required: true
+jobs:
+  call-workflow-passing-data:
+    uses: octo-org/example-repo/.github/workflows/check-process-workflow.yml@main
+    with:
+      config-path certificate-sign-finalize-authenticate:pass
+ .github/secret-scanning-api-key-generater-tool-authentication-moch-deliver-error-send-request-authorized-overide-return-certificate-sign-if-error-printf("decline")return cancled
 fi
 
 # Replace the Deploy URL with the Preview URL
